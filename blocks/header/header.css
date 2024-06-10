@@ -28,6 +28,8 @@ header nav[aria-expanded='true'] {
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 @media (width >= 600px) {
@@ -162,7 +164,7 @@ header nav .nav-sections {
 }
 
 header nav[aria-expanded='true'] .nav-sections {
-  display: block;
+  display: flex;
   visibility: visible;
   align-self: start;
 }
@@ -172,10 +174,18 @@ header nav .nav-sections ul {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  align-items: center;
 }
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+header nav .nav-sections ul > li > a:hover {
+  text-decoration: none;
+  background: #ffea00;
+  padding: 15px 17px;
 }
 
 header nav .nav-sections ul > li > ul {
