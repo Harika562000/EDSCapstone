@@ -21,13 +21,17 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 32px;
+    align-items: flex-start;
+    flex-direction: row-reverse;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
   }
+}
+
+.columns > div > div:not(.columns-img-col) {
+  background: #ebebeb;
+  padding: 3.5em 2em 2em;
 }
