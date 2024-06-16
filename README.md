@@ -1,4 +1,4 @@
-EDSCapstone
+**EDSCapstone**
 
 ## Environments
 - Preview: https://main--EDSCapstone--Harika562000.hlx.page/
