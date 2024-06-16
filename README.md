@@ -1,5 +1,4 @@
-# Your Project's Title...
-Your project's description...
+EDSCapstone
 
 ## Environments
 - Preview: https://main--EDSCapstone--Harika562000.hlx.page/
