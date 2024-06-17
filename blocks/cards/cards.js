@@ -1,4 +1,5 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import removeDefaultBtn from '../../scripts/helper.js';
 
 export default function decorate(block) {
   /* change to ul, li */
@@ -15,4 +16,7 @@ export default function decorate(block) {
   ul.querySelectorAll('.cards-card-image img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+
+  const wrapper = document.querySelector('.cards .cards-card-body');
+  removeDefaultBtn(wrapper);
 }

@@ -1,4 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
+import removeDefaultBtn from '../../scripts/helper.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
@@ -17,4 +18,7 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  const wrapper = document.querySelector('.footer');
+  removeDefaultBtn(wrapper);
 }

@@ -28,6 +28,10 @@ footer .footer .footer-nav > div > div > p > .button {
   background-color: none;
 }
 
+footer .footer .footer-nav > div > div > p .icon > img {
+  width: 128px;
+}
+
 footer .footer .footer-nav > div > div > ul {
   list-style: none;
 }
