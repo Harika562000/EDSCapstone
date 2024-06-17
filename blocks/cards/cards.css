@@ -64,6 +64,11 @@
   height: 164px;
 }
 
+.photographer-cards > ul {
+  align-items: center;
+  text-align: center;
+}
+
 .cards-container .default-content-wrapper em {
   font-size: 14px;
 }
