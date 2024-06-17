@@ -57,3 +57,13 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.photographer-cards > ul > li img {
+  border-radius: 50%;
+  width: 164px;
+  height: 164px;
+}
+
+.cards-container .default-content-wrapper em {
+  font-size: 14px;
+}

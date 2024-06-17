@@ -17,11 +17,12 @@
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: black;
+  --text-color: #202020;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --heading-font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+  --heading-font-family-1: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -48,17 +49,6 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
-  :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
-  }
-}
-
 body {
   font-size: var(--body-font-size-m);
   margin: 0;
@@ -83,17 +73,29 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
   line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 27px;
+  margin-bottom: 13.5px;
   scroll-margin: calc(var(--nav-height) + 1em);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family-1);
+  font-weight: 600;
 }
 
 h1 { font-size: var(--heading-font-size-xl); }
 h2 { font-size: var(--heading-font-size-l); }
-h3 { font-size: var(--heading-font-size-l); }
+h3 { font-size: var(--heading-font-size-m); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }

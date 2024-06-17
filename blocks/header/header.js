@@ -161,8 +161,6 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
-  // Add box shadow on scroll
-  document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
@@ -171,5 +169,4 @@ export default async function decorate(block) {
         header.classList.remove('scrolled');
       }
     });
-  });
 }
