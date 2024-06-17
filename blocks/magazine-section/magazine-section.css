@@ -1,0 +1,7 @@
+.magazine-section h2::after {
+    border-bottom: 2px solid #ffea00;
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+}
