@@ -10,11 +10,9 @@ function closeOnEscape(e) {
     const navSections = nav.querySelector('.nav-sections');
     const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
     if (navSectionExpanded && isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections);
       navSectionExpanded.focus();
     } else if (!isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
       toggleMenu(nav, navSections);
       nav.querySelector('button').focus();
     }
@@ -26,7 +24,6 @@ function openOnKeydown(e) {
   const isNavDrop = focused.className === 'nav-drop';
   if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
     const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
-    // eslint-disable-next-line no-use-before-define
     toggleAllNavSections(focused.closest('.nav-sections'));
     focused.setAttribute('aria-expanded', dropExpanded ? 'false' : 'true');
   }
@@ -87,6 +84,20 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 /**
+ * Adds active class to the current page link
+ * @param {Element} navSections The nav sections within the container element
+ */
+function setActiveLink(navSections) {
+  const currentUrl = window.location.pathname;
+  navSections.querySelectorAll('a').forEach((link) => {
+    const linkUrl = new URL(link.href);
+    if (linkUrl.pathname === currentUrl) {
+      link.classList.add('active');
+    }
+  });
+}
+
+/**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
@@ -127,6 +138,9 @@ export default async function decorate(block) {
         }
       });
     });
+
+    // Set active link
+    setActiveLink(navSections);
   }
 
   // hamburger for mobile
@@ -146,4 +160,16 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // Add box shadow on scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  });
 }

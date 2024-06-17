@@ -1,4 +1,7 @@
-/* header and nav layout */
+header.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -180,9 +183,18 @@ header nav .nav-sections ul {
 header nav .nav-sections ul > li {
   font-weight: 700;
   text-transform: uppercase;
+  color: #202020;
+  font-size: 14px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-header nav .nav-sections ul > li > a:hover {
+header nav .nav-sections ul > li > a:hover{
+  text-decoration: none;
+  background: #ffea00;
+  padding: 15px 17px;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li > a.active {
   text-decoration: none;
   background: #ffea00;
   padding: 15px 17px;
