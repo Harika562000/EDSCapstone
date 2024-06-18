@@ -2,8 +2,6 @@ indices:
   mysite:
     include:
       - /**
-    exclude:
-      - /magazine/**
     target: /query-index.json
     properties:
       title:
@@ -42,14 +40,14 @@ indices:
         select: head > meta[property="og:title"]
         value: |
           attribute(el, 'content')
+      url:
+        select: head > meta[property="og:url"]
+        value: |
+          attribute(el, 'content')
       image:
         select: head > meta[property="og:image"]
         value: |
           match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
-      # imageAlt:
-      #   select: head > meta[property="og:image:alt"]
-      #   value: |
-      #     attribute(el, 'content')
       description:
         select: head > meta[name="description"]
         value: |
