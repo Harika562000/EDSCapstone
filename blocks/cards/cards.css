@@ -33,17 +33,6 @@
   margin: 16px;
 }
 
-.cards .cards-card-body p:not(strong) {
-  color: dimgray;
-  display: block;
-  font-size: var(--fontSizeSmall, 14px);
-  margin-top: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 .cards .cards-card-image {
   line-height: 0;
 }
@@ -62,6 +51,16 @@
   border-radius: 50%;
   width: 164px;
   height: 164px;
+}
+.photographer-cards > ul > li .icon {
+  background: black;
+  padding: 10px;
+
+}
+
+.photographer-cards > ul > li .icon img {
+  width: 24px;
+  height: 24px;
 }
 
 .photographer-cards > ul {
