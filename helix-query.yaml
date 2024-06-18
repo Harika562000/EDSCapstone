@@ -34,7 +34,7 @@ indices:
   magazine:
     include:
       - '/magazine/**'
-    target: /magazine/magazine-index.json
+    target: /magazine/query-index.json
     properties:
       title:
         select: head > meta[property="og:title"]
