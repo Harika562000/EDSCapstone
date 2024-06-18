@@ -41,7 +41,7 @@ indices:
       title:
         select: head > meta[property="og:title"]
         value: |
-          textContent(el)
+          attribute(el, 'content')
       image:
         select: head > meta[property="og:image"]
         value: |
