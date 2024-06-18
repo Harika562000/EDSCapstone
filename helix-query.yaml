@@ -2,6 +2,8 @@ indices:
   mysite:
     include:
       - /**
+    exclude:
+      - /magazine/**
     target: /query-index.json
     properties:
       title:
