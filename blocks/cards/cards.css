@@ -25,6 +25,23 @@
   grid-gap: 16px;
 }
 
+.cards .cards-card-body p a {
+  color: #202020;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cards .cards-card-body p {
+  color: dimgray;
+  display: block;
+  font-size: var(--fontSizeSmall, 14px);
+  margin-top: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .cards > ul > li {
   background-color: var(--background-color);
 }

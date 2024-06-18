@@ -17,6 +17,6 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 
-  const wrapper = document.querySelector('.cards .cards-card-body');
+  const wrapper = document.querySelectorAll('.cards .cards-card-body');
   removeDefaultBtn(wrapper);
 }
