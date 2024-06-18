@@ -6,17 +6,7 @@
     width: 84px;
   }
 
-  .all-articles-container > div > p > .button {
-    background: #ffea00;
-    border-radius: 0;
-    color: #202020;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 1em 2.5em;
-    text-transform: uppercase;
-  }
-
-  .all-articles> ul {
+  .all-articles > ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -29,11 +19,11 @@
     background-color: var(--background-color);
   }
 
-  .all-articles.all-articles-card-body {
+  .all-articles .all-articles-card-body {
     margin: 16px;
   }
 
-  .all-articles.all-articles-card-body p:not(strong) {
+  .all-articles .all-articles-card-body p:not(strong) {
     color: dimgray;
     display: block;
     font-size: var(--fontSizeSmall, 14px);
@@ -44,15 +34,15 @@
     white-space: nowrap;
   }
 
-  .all-articles.all-articles-card-image {
+  .all-articles .all-articles-card-image {
     line-height: 0;
   }
 
-  .all-articles.all-articles-card-body > *:first-child {
+  .all-articles .all-articles-card-body > *:first-child {
     margin-top: 0;
   }
 
-  .all-articles> ul > li img {
+  .all-articles > ul > li img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
