@@ -1,4 +1,4 @@
-.cards-container > div > h2::after {
+.all-articles-container > div > h2::after {
     border-bottom: 2px solid #ffea00;
     content: "";
     display: block;
@@ -6,7 +6,7 @@
     width: 84px;
   }
 
-  .cards-container > div > p > .button {
+  .all-articles-container > div > p > .button {
     background: #ffea00;
     border-radius: 0;
     color: #202020;
@@ -29,11 +29,11 @@
     background-color: var(--background-color);
   }
 
-  .all-articles.cards-card-body {
+  .all-articles.all-articles-card-body {
     margin: 16px;
   }
 
-  .all-articles.cards-card-body p:not(strong) {
+  .all-articles.all-articles-card-body p:not(strong) {
     color: dimgray;
     display: block;
     font-size: var(--fontSizeSmall, 14px);
@@ -44,11 +44,11 @@
     white-space: nowrap;
   }
 
-  .all-articles.cards-card-image {
+  .all-articles.all-articles-card-image {
     line-height: 0;
   }
 
-  .all-articles.cards-card-body > *:first-child {
+  .all-articles.all-articles-card-body > *:first-child {
     margin-top: 0;
   }
 
