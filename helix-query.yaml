@@ -31,7 +31,7 @@ indices:
 
   magazine:
     include:
-      - '/magazines/**'
+      - '/magazine/**'
     target: /magazine/magazine-index.json
     properties:
       title:
