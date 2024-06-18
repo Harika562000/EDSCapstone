@@ -20,6 +20,5 @@ export default async function decorate(block) {
   block.append(footer);
 
   const wrapper = document.querySelector('.footer');
-  console.log(wrapper)
   removeDefaultBtn(wrapper);
 }

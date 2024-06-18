@@ -18,7 +18,7 @@ async function fetchArticles() {
     }
 }
 
-async function decorate(block) {
+export default async function decorate(block) {
     const articles = await fetchArticles();
 
     const ul = document.createElement('ul');
