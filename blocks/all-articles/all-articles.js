@@ -10,6 +10,7 @@ async function fetchArticles() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log('Fetched data:', data); // Debugging: log the fetched data
         return data.data; // Adjust this line based on the actual JSON structure
     } catch (error) {
         console.error('Error fetching articles:', error);
@@ -20,7 +21,6 @@ async function fetchArticles() {
 async function decorate(block) {
     const articles = await fetchArticles();
 
-    // Create a new unordered list element
     const ul = document.createElement('ul');
 
     articles.forEach(article => {
@@ -31,7 +31,7 @@ async function decorate(block) {
         const picture = document.createElement('picture');
         const source = document.createElement('source');
         source.type = 'image/webp';
-        source.srcset = article.imageWebp; // Replace with actual image URL in WebP format from the API
+        source.srcset = article.path; // Replace with actual image URL in WebP format from the API
         const img = document.createElement('img');
         img.loading = 'lazy';
         img.alt = article.title; // Replace with actual alt text from the API
@@ -65,9 +65,4 @@ async function decorate(block) {
 
     // const wrapper = document.querySelector('.all-articles .all-articles-card-body');
     // removeDefaultBtn(wrapper);
-}
-
-const block = document.querySelector('.all-articles.block');
-if (block) {
-    decorate(block);
 }
