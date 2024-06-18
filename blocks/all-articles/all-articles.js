@@ -13,7 +13,6 @@ async function fetchArticles() {
         console.log('Fetched data:', data); // Debugging: log the fetched data
         return data.data; // Adjust this line based on the actual JSON structure
     } catch (error) {
-        console.error('Error fetching articles:', error);
         return [];
     }
 }
