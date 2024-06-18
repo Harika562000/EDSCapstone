@@ -1,5 +1,5 @@
-import { createOptimizedPicture } from './aem.js';
-import removeDefaultBtn from './helper.js';
+// import { createOptimizedPicture } from './aem.js';
+// import removeDefaultBtn from './helper.js';
 
 
 async function fetchArticles() {
@@ -67,14 +67,14 @@ export default async function decorate(block) {
             ul.appendChild(li);
         });
 
-        ul.querySelectorAll('.all-articles-card-image img').forEach(img => {
-            const optimizedPicture = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-            img.closest('picture').replaceWith(optimizedPicture);
-        });
+        // ul.querySelectorAll('.all-articles-card-image img').forEach(img => {
+        //     const optimizedPicture = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
+        //     img.closest('picture').replaceWith(optimizedPicture);
+        // });
 
         block.textContent = '';
         block.appendChild(ul);
 
-        const wrapper = document.querySelector('.all-articles .all-articles-card-body');
-        removeDefaultBtn(wrapper);
+        // const wrapper = document.querySelector('.all-articles .all-articles-card-body');
+        // removeDefaultBtn(wrapper);
 }
