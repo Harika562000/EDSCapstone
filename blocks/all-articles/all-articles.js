@@ -10,11 +10,16 @@ async function fetchArticles() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log('Fetched data:', data); // Debugging: log the fetched data
-        return data.data; // Adjust this line based on the actual JSON structure
+        console.log('Fetched data:', data);
+        return data.data;
     } catch (error) {
         return [];
     }
+}
+
+function getAbsolutePath(relativePath) {
+    const baseUrl = 'https://main--edscapstone--harika562000.hlx.live';
+    return new URL(relativePath, baseUrl).href;
 }
 
 export default async function decorate(block) {
@@ -30,11 +35,11 @@ export default async function decorate(block) {
         const picture = document.createElement('picture');
         const source = document.createElement('source');
         source.type = 'image/webp';
-        source.srcset = article.path; // Replace with actual image URL in WebP format from the API
+        source.srcset = getAbsolutePath(article.image); // Replace with actual image URL in WebP format from the API
         const img = document.createElement('img');
         img.loading = 'lazy';
         img.alt = article.title; // Replace with actual alt text from the API
-        img.src = article.image; // Replace with actual image URL in JPEG format from the API
+        img.src = getAbsolutePath(article.image); // Replace with actual image URL in JPEG format from the API
         picture.appendChild(source);
         picture.appendChild(img);
         imageDiv.appendChild(picture);
