@@ -1,4 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
+import removeDefaultBtn from '../../scripts/helper.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -120,11 +121,7 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
-  }
+  removeDefaultBtn(navBrand);
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
