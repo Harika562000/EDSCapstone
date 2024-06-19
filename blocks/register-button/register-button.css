@@ -1,3 +1,7 @@
+.register-button-container {
+    padding: 0 !important;
+}
+
 .register-button {
     position: fixed;
     top: 25%;
