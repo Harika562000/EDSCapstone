@@ -6,6 +6,7 @@ import {
   decorateButtons,
   decorateIcons,
   decorateSections,
+  decorateBlock,
   decorateBlocks,
   decorateTemplateAndTheme,
   waitForLCP,
@@ -69,8 +70,19 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
+async function loadRegister(main) {
+  const section = document.createElement('div');
+  const wrapper = document.createElement('div');
+  section.classList.add('section');
+  section.append(wrapper);
+  const registerBlock = buildBlock('register-button', '');
+  wrapper.append(registerBlock);
+  main.append(section);
+  decorateBlock(registerBlock);
+}
+
 /**
- * Loads everything needed to get to LCP.
+ * Loads and decorates the header, main, and footer.
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
@@ -79,6 +91,7 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    loadRegister(main);
     document.body.classList.add('appear');
     await waitForLCP(LCP_BLOCKS);
   }

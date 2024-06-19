@@ -1,4 +1,4 @@
-.scrolled {
+.scrolled .nav-wrapper{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -189,10 +189,13 @@ header nav .nav-sections ul > li {
   padding: 20px 0;
 }
 
+header nav .nav-sections ul > li > a {
+  padding: 15px 17px;
+}
+
 header nav .nav-sections ul > li > a:hover{
   text-decoration: none;
   background: #ffea00;
-  padding: 15px 17px;
 }
 
 header nav .nav-sections .default-content-wrapper > ul > li > a.active {
