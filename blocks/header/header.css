@@ -186,6 +186,7 @@ header nav .nav-sections ul > li {
   color: #202020;
   font-size: 14px;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px 0;
 }
 
 header nav .nav-sections ul > li > a:hover{

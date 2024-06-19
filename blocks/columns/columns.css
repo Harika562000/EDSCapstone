@@ -30,6 +30,10 @@
     order: unset;
   }
 
+  .columns > div > div:not(.columns-img-col) {
+    height: 504px;
+  }
+
   .columns > div > div > p {
     font-size: 14px;
   }
@@ -50,7 +54,7 @@
 
 .columns > div > div:not(.columns-img-col) {
   background: #ebebeb;
-  padding: 3.5em 2em 2em;
+  padding: 0 24px;
 }
 
 .columns > div > div:not(.columns-img-col) > .button-container > .button {
